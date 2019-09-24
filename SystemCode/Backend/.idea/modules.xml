@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/trippingo.iml" filepath="$PROJECT_DIR$/trippingo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trippingo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trippingo_main.iml" group="trippingo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trippingo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trippingo_test.iml" group="trippingo" />
+    </modules>
+  </component>
+</project>

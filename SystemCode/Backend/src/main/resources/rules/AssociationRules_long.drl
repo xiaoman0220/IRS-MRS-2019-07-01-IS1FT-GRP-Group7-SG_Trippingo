@@ -1,0 +1,1554 @@
+package rules;
+import trippingo.model.TouristAttraction;
+import trippingo.dto.AssociationRecommendationDTO;
+dialect  "mvel"
+
+rule "AssociationRules_long_1"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Waterfront Promenade")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_2"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_3"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_4"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_5"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_6"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_7"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Cloud Forest")
+    $touristattraction4:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_8"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Jurong Bird Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_9"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_10"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_11"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_12"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_13"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Buddha Tooth Relic Temple and Museum")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_14"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_15"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Flower Dome");
+end
+
+rule "AssociationRules_long_16"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction4:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_17"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_18"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_19"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_20"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_21"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_22"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_23"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_24"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_25"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Night Safari")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_26"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_27"
+    when
+    $touristattraction1:TouristAttraction(name=="Chinatown")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_28"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_29"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_30"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Universal Studios Singapore")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_31"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Waterfront Promenade")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_32"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_33"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Night Safari")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_34"
+    when
+    $touristattraction1:TouristAttraction(name=="Chinatown")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_35"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_36"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_37"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_38"
+    when
+    $touristattraction1:TouristAttraction(name=="Buddha Tooth Relic Temple and Museum")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_39"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_40"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_41"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_42"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Cloud Forest")
+    $touristattraction4:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_43"
+    when
+    $touristattraction1:TouristAttraction(name=="Jurong Bird Park")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_44"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_45"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Universal Studios Singapore")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_46"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_47"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_48"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_49"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_50"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_51"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Cloud Forest")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_52"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_53"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_54"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_55"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_56"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $touristattraction3:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_57"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_58"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_59"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_60"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay")
+    $touristattraction2:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_61"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_62"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_63"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_64"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_65"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_66"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Cloud Forest")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_67"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_68"
+    when
+    $touristattraction1:TouristAttraction(name=="Chinatown")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_69"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_70"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction4:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_71"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_72"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_73"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Orchard Road");
+end
+
+rule "AssociationRules_long_74"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay")
+    $touristattraction2:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_75"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_76"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_77"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_78"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_79"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_80"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_81"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_82"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_83"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_84"
+    when
+    $touristattraction1:TouristAttraction(name=="Skyline Luge Sentosa")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_85"
+    when
+    $touristattraction1:TouristAttraction(name=="Adventure Cove Waterpark")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_86"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_87"
+    when
+    $touristattraction1:TouristAttraction(name=="Orchard Road")
+    $touristattraction2:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_88"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_89"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_90"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_91"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_92"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_93"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Buddha Tooth Relic Temple and Museum")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_94"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_95"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_96"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_97"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_98"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_99"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_100"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_101"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_102"
+    when
+    $touristattraction1:TouristAttraction(name=="Madame Tussauds Singapore")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_103"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Singapore Flyer")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_104"
+    when
+    $touristattraction1:TouristAttraction(name=="Flower Dome")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_105"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_106"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_107"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_108"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_109"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Chinatown");
+end
+
+rule "AssociationRules_long_110"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_111"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_112"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Cloud Forest")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_113"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Flower Dome")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_114"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_115"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_116"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_117"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_118"
+    when
+    $touristattraction1:TouristAttraction(name=="Sentosa Merlion")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_119"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Singapore Flyer")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_120"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_121"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_122"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_123"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_124"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("National Orchid Garden");
+end
+
+rule "AssociationRules_long_125"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_126"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_127"
+    when
+    $touristattraction1:TouristAttraction(name=="Cloud Forest")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_128"
+    when
+    $touristattraction1:TouristAttraction(name=="SEA Aquarium")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_129"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_130"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_131"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction2:TouristAttraction(name=="SEA Aquarium")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_132"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_133"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Buddha Tooth Relic Temple and Museum")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_134"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="SEA Aquarium")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Universal Studios Singapore");
+end
+
+rule "AssociationRules_long_135"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_136"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_137"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="The Helix Bridge")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+    System.out.printf("Cloud Forest");
+end
+
+rule "AssociationRules_long_138"
+    when
+    $touristattraction1:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_139"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_140"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_141"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Night Safari")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_142"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Chinatown")
+    $touristattraction3:TouristAttraction(name=="Merlion Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_143"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_144"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_145"
+    when
+    $touristattraction1:TouristAttraction(name=="Supertree Grove")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_146"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_147"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_148"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_149"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_150"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_151"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_152"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_153"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Botanic Gardens")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_154"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_155"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Chinatown")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_156"
+    when
+    $touristattraction1:TouristAttraction(name=="National Orchid Garden")
+    $touristattraction2:TouristAttraction(name=="Singapore Flyer")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_157"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Orchard Road")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_158"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Singapore Zoo")
+    $touristattraction3:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_159"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="Marina Bay Sands Skypark")
+    $touristattraction3:TouristAttraction(name=="Marina Bay")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Cloud Forest");
+end
+
+rule "AssociationRules_long_160"
+    when
+    $touristattraction1:TouristAttraction(name=="Gardens by the Bay")
+    $touristattraction2:TouristAttraction(name=="National Orchid Garden")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Botanic Gardens");
+end
+
+rule "AssociationRules_long_161"
+    when
+    $touristattraction1:TouristAttraction(name=="Singapore Flyer")
+    $touristattraction2:TouristAttraction(name=="Jurong Bird Park")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Zoo");
+end
+
+rule "AssociationRules_long_162"
+    when
+    $touristattraction1:TouristAttraction(name=="River Safari")
+    $recommendationBox: AssociationRecommendationDTO(associatedAttractionNames!=null)
+    then
+    $recommendationBox.getAssociatedAttractionNames().add("Singapore Zoo");
+end
+

@@ -1,0 +1,101 @@
+import trippingo.optaplanner.resources.Day;
+import trippingo.optaplanner.resources.PlanAttraction;
+import trippingo.optaplanner.resources.TimeGrain;
+import trippingo.optaplanner.resources.TripPlanner;
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+global HardSoftScoreHolder scoreHolder;
+
+// ############################################################################
+// Hard constraints
+// ############################################################################
+
+rule "checkOpeningHours"
+	when
+		$planAttraction : PlanAttraction ($StartingTimeGrain : startingTimeGrain.grainIndex < $OpeningTime : attraction.openingTimeGrains)
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, ($StartingTimeGrain - $OpeningTime));
+		
+end
+
+rule "checkClosingHours"
+	when
+		$planAttraction : PlanAttraction ($endTimeGrain: (startingTimeGrain.grainIndex + attraction.getMaxDurationTimeGrains()) > $closingTime: attraction.getClosingTimeGrains())
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, ($closingTime -$endTimeGrain));//$StartingTimeGrain - $OpeningTime );
+		
+end
+
+/**
+rule "overlapping durations"
+	when
+		$leftAssignment : PlanAttraction (startingTimeGrain != null)
+		$rightAssignment : PlanAttraction (startingTimeGrain != null, attraction.id <  $leftAssignment.getAttraction().getId())
+		
+	then
+        if ($leftAssignment.calculateOverlap($rightAssignment) != 0) {
+            scoreHolder.addHardConstraintMatch(kcontext, -10);
+        }	
+		
+		
+end
+**/
+rule "noDuplicateTimeslots"
+	when
+		$leftAssignment : PlanAttraction ($startTimeGrain: startingTimeGrain != null)
+		$rightAssignment : PlanAttraction (startingTimeGrain != null, $startTimeGrain.grainIndex == startingTimeGrain.grainIndex)
+		
+	then
+        if ($leftAssignment.calculateOverlap($rightAssignment) != 0) {
+            scoreHolder.addHardConstraintMatch(kcontext, -100);
+        }	
+		
+		
+end
+
+rule "withinTravelHours"
+	when 
+		$planAttraction : PlanAttraction (startingTimeGrain!=null)
+	
+	then 
+	if ($planAttraction.travelHoursPenaltyScore()!=0){
+		scoreHolder.addSoftConstraintMatch(kcontext, 0);//$planAttraction.travelHoursPenaltyScore());
+	}
+	
+end
+
+
+
+/**
+
+rule "travelTimePenalty"
+	when
+	
+	then (scoreHolder.addSoftConstraintMatch(kcontext, -$planAttraction.travelTimePenaltyScore());
+
+	
+end
+**/
+
+// This rule can be a penalty or reward, reward > mean, penalty < mean
+rule "attractionDurationBalancing"
+	when
+		$leftAssignment : PlanAttraction ($leftSerial : serialNo > 0)
+		$rightAssignment : PlanAttraction (serialNo == $leftSerial + 1)
+	then 
+		scoreHolder.addSoftConstraintMatch(kcontext, $leftAssignment.attractionDurationScore($rightAssignment));
+	
+end
+
+rule "nonAssignmentPenalty"
+	when
+		$assignment : PlanAttraction ($leftSerial : serialNo < 0)
+	then 
+		scoreHolder.addHardConstraintMatch(kcontext, -10);
+	
+end
+	
+
+
+	
+
+
