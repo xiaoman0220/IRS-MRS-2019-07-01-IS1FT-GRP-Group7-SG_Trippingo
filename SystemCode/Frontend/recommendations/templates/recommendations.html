@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">ATTRACTION RECOMMENDATION</h1>
+
+<h6 class="text-center">Based on your infomation, we recommend these attractions to you:</span>
+<form action="../{{pk}}/selectedAttractions" method='POST'>
+    {% csrf_token %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-lg-9">
+      <ul class="list-group" id="recommendation_list">
+        {% for rec in recs %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <input class="form-check-input" type="checkbox" {% if rec.selected %} checked {% endif %} id="defaultCheck1" name="{{rec.attraction_id}}"
+                onchange="update_list()">
+          <div class="image-parent">
+              <img class="img-fluid" src="{{rec.img_url}}" width="150px" height="100px">
+          </div>
+          <h5 class="card-title">{{ rec.name }}</h5>
+                <p class="card-text">{{ rec.description }}</p>
+          
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-12 col-sm-8 col-lg-3">
+        <h4 class="text-center">Selected Attractions</h4>
+        <ul class="list-group list-group-flush" id="attraction_list">
+            {% for selectedRec in selectedRecs %}
+  <li class="list-group-item">{{selectedRec.name}}</li>
+  {% endfor %}
+</ul>
+    </div>
+  </div>
+
+<button type="submit" class="save btn btn-default">Next></button>
+
+</div>
+</form>
+<script>
+    console.log('Executing script')
+    function update_list() {
+        console.log('update_list');
+        rec_list = document.getElementById("recommendation_list")
+        attraction_list = document.getElementById("attraction_list")
+        while(attraction_list.firstChild){ 
+            attraction_list.removeChild(attraction_list.firstChild);
+        }
+        var children = rec_list.children;
+        for (var i = 0; i < children.length; i++) {
+            var list_item = children[i];
+            var li = document.createElement("li");
+            var attraction_name = list_item.children[2].innerHTML
+            if(list_item.children[0].checked == true){
+                console.log(attraction_name)
+                li.innerHTML = '<li class="list-group-item">' +attraction_name +'</li>';
+                attraction_list.appendChild(li);
+            }
+        }
+    
+    }
+  </script>
+{% endblock %}
+

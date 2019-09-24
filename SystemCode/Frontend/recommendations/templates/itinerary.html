@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+#map {
+  height: 500px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+*{margin:0;padding:0;}
+#main{
+    width:100%;
+    overflow:hidden;
+}
+#main .main-left{
+    width:15%;
+    float:left;
+}
+#main .main-center{
+    width:25%;
+    float:left;
+}
+#main .main-right{
+    width:60%;
+    float:right;
+    background:lightgreen;
+}
+</style>
+
+<script>
+function attdetail(i) {
+    //var str = "{% for dayplan in dayPlans %}{% if dayplan.serialNo == "+ i +"%}<p class='test'>"+i+"</p>{% endif %}{% endfor %}";
+    var str="<p class='test'>"+i+"</p>"
+    document.getElementById("daydetail").innerHTML=str;
+    console.log(str);
+}
+</script>
+
+<h1 class="text-center">YOUR ITINERARY</h1>
+  <div class="container" id="main">
+
+      <div class="main-left">
+          <ul style="list-style-type:none;">
+              {%for dayplan in dayPlans %}
+            <li>
+                <button class="button" onclick="initialize({{ forloop.counter }}) ">DAY {{ forloop.counter }}</button>
+            </li>
+              {% endfor %}
+          </ul>
+      </div>
+
+      <div class="main-center">
+          <ul id="daydetail" style="list-style-type:none;">
+              {% for dayplan in dayPlans %}{% if dayplan.serialNo == 2  %}{% for att in dayplan.attractionVisit%}<li class="d-flex justify-content-between align-items-center"><strong>{{att.attraction.name}}</strong></li><li class="d-flex justify-content-between align-items-center"><p>Arrival Time: {{att.timeofDay}}</p></li>{% endfor %}{% endif %}{% endfor %}
+          </ul>
+      </div>
+
+      <div  class="main-right">
+        <div id="map"></div>
+          <script>
+            var attrList = ['Singapore Flyer', 'Gardens by the Bay'];
+            var labels = '1234567';
+            var labelIndex = 0;
+            var test = [{lat: 1.28,  lng: 103.95}, {lat: 1.289,  lng: 103.8632}];
+            var hotel = {lat: 1.2815683,lng: 103.8636132};
+
+var direct = [
+  ['https://www.google.com/maps/dir/?api=1&origin=&destination=Gardens by the Bay Singapore&travelmode=transit'],
+  ['https://www.google.com/maps/dir/?api=1&origin=&destination=Gardens by the Bay Singapore&travelmode=transit']
+];
+var timeofDays = [
+  ['09:30:00'],
+  ['09:30:00']
+];
+
+function initialize(k) {
+    k=1;
+    k = k-1;
+    var attrLatList = {{attrLatList}};
+    var attrLngList = {{attrLngList}};
+    var travelPlanCoordinates = [];
+    for(q=0; q<attrLatList[k].length; q++){
+        travelPlanCoordinates[q] = {lat: attrLatList[k][q],lng: attrLngList[k][q]};
+        //console.log(att);
+
+    }
+    console.log(attrLatList);
+
+  var travelPath = new google.maps.Polyline({
+    path: travelPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: travelPlanCoordinates[0]
+  });
+
+  travelPath.setMap(map);
+
+  // Add a marker at the center of the map.
+
+  for (i = 0; i < travelPlanCoordinates.length; i++) {
+    addMarker(attrList[i], travelPlanCoordinates[i], map, direct[i], timeofDays[i]);
+  }
+}
+
+// Adds a marker to the map.
+function addMarker(attr, location, map, direct, time) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  //var infowindow = new google.maps.InfoWindow({
+  //         content: contentString
+  //       });
+  var marker = new google.maps.Marker({
+    position: location,
+    label: labels[labelIndex++ % labels.length],
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  //document.getElementById('s1').value = location
+  //Time suppose to be
+  // direction
+  var contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    '</div>' +
+    '<h1 id="firstHeading" class="firstHeading"></h1>' +
+    '<p><b>' + attr + '</b>' +
+    '<div id="bodyContent">' +
+    //'<p><b><input id="s1" type="hidden" name="attname" value="" /></b>'
+    '<p>' + time +
+    '<p>' + direct +
+    '<p><b></b>'
+  '</div>' +
+  '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+}
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ4Q24NuUFkO3sQBdtcwNxSnO3qwZqwW8&callback=initialize"
+    async defer></script>
+
+{% endblock %}
+

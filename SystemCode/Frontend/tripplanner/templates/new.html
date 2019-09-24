@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+	<h1>Tell us more</h1>
+
+    <form method="POST" class="SetTravellerInfo">{% csrf_token %}
+        <p>{{ Form }}</p>
+
+        <button type="Back" onClick="window.history.back();return false;" class="save btn btn-default">< Previous</button>                                      
+        <button type="submit" class="save btn btn-default">Next ></button>        
+
+    </form>
+</div>
+</div>
+{% endblock %}

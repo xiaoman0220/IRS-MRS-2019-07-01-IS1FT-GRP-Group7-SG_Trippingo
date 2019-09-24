@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">PLANNING YOUR ITINERARY...</h1>
+{% load static %}
+<img src="https://cdn.dribbble.com/users/563824/screenshots/3633228/untitled-5.gif" alt="My image">
+<form action="../{{pk}}/itinerary" method='POST' id="myform">
+    {% csrf_token %}
+  <div class="container">
+    
+  </div>
+</form>
+<script>
+    console.log('Executing script')
+    $(document).ready(function(){
+      $("#myform").submit();
+    })
+  </script>
+{% endblock %}
+
