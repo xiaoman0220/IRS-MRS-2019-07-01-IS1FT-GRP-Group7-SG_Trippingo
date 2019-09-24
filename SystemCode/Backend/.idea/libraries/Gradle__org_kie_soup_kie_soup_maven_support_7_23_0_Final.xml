@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.kie.soup:kie-soup-maven-support:7.23.0.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kie.soup/kie-soup-maven-support/7.23.0.Final/9c8d1eed628d56d4bbe8b907c580e9ead099fe5e/kie-soup-maven-support-7.23.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kie.soup/kie-soup-maven-support/7.23.0.Final/cdadb0d9e34522913bc18efe461b9f2ec1bb6fda/kie-soup-maven-support-7.23.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

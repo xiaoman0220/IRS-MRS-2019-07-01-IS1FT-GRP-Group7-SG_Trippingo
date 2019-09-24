@@ -1,0 +1,20 @@
+import trippingo.model.TravelPlan
+import trippingo.model.TouristAttraction
+import trippingo.model.DayPlan
+dialect  "mvel"
+
+rule "Travel Plan Validation"
+	when
+	travelplan:TravelPlan( totalDuration  > (travelPreferences.travelHoursPerDay * travelPreferences.noOfTravelDays) )
+    then
+    travelplan.setOverallValidation(false);
+end
+
+rule "Daily Plan Validation"
+	when
+	dayplan:DayPlan()
+	travelplan:TravelPlan()
+	DayPlan ( dayplan.dailyTotalDuration > travelplan.travelPreferences.travelHoursPerDay )
+    then
+    dayplan.setDailyValidation(false);
+end 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="%style{%d{ISO8601}}{black} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{1.}}{bright,yellow}: %msg%n%throwable" />
+        </Console>
+ 
+        <RollingFile name="RollingFile"
+            fileName="./logs/application.log"
+            filePattern="./logs/$${date:yyyy-MM}/spring-boot-logger-log4j2-%d{-dd-MMMM-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- rollover on startup, daily and when the file reaches 
+                    10 MegaBytes -->
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                    size="10 MB" />
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+		<File name="ImportLog" fileName="logs/import.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+ 
+    <Loggers>
+        <!-- LOG everything at ERROR level -->
+        <Root level="error">
+        </Root>
+ 
+        <!-- LOG trippingo.service* Service logs  at TRACE level -->
+        <Logger name="trippingo" level="trace" additivity="false">
+			<AppenderRef ref="RollingFile"/>
+		</Logger>
+		<!-- LOG trippingo.data* Import logs at DEBUG level -->
+        <Logger name="trippingo.data" level="debug" additivity="false">
+			<AppenderRef ref="ImportLog"/>
+		</Logger>
+		<Logger name="org.springframework.boot" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
+ 
+</Configuration>

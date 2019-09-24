@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.drools:drools-core:7.23.0.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.drools/drools-core/7.23.0.Final/47e5c9ebd2f2496d6d786fe710a39946e77c200e/drools-core-7.23.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.drools/drools-core/7.23.0.Final/a6ae8ee10c8f76cfa1fc92eddf262202f727e3f2/drools-core-7.23.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.optaplanner:optaplanner-core:7.23.0.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.optaplanner/optaplanner-core/7.23.0.Final/3fb2e67713e7ea83c3b180b69845f43116bd330b/optaplanner-core-7.23.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.optaplanner/optaplanner-core/7.23.0.Final/614dc63fe65cd29c5d1fa8c7db7ff9aaa65e3bae/optaplanner-core-7.23.0.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
