@@ -22,13 +22,13 @@ For the final result, travellers will get a full picture of how their trips in S
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name  | Student ID  | Work Items | Email |
+| Official Full Name  | Student ID  | Work Items |
 | :------------ |:---------------:| :-----| :-----|
-| Vidur Puliani | A0198492L | Klook Web Scraping, Promotion-Attraction Matching, Spring Boot Application and Database design, Opta-planner integration, Recommendation User Interface| A0198492L@u.nus.edu |
-| Gong Yifei | A0198495E | Data preprocessing, Prototype design, Diagrams, Implementation of rules, Itinerary interface, Video| A0198495E@u.nus.edu |
-| Li Jingmeng| A0198484J | Data preprocessing, Association Mining, Association Knowledge Representation, Association Recommendation User Interface| A0198484J@u.nus.edu |
-| Jiang Yanni | A0201097M | Data Preprocessing, Ranking Processing, DIstance Matrix Collection, Google Maps Interaction and Interface| A0201097M@u.nus.edu |
-| Ngo Jinze Donal | A0198487A | TripAdvisor Web Scraping, Data Preprocessing, Opta-planner Integration, Promotion-Attraction Matching, Web Input interface| A0198487A@u.nus.edu |
+| Vidur Puliani | A0198492L | Klook Web Scraping, Promotion-Attraction Matching, Spring Boot Application and Database design, Opta-planner integration, Recommendation User Interface|
+| Gong Yifei | A0198495E | Data preprocessing, Prototype design, Diagrams, Implementation of rules, Itinerary interface, Video|
+| Li Jingmeng| A0198484J | Data preprocessing, Association Mining, Association Knowledge Representation, Association Recommendation User Interface|
+| Jiang Yanni | A0201097M | Data Preprocessing, Ranking Processing, DIstance Matrix Collection, Google Maps Interaction and Interface|
+| Ngo Jinze Donal | A0198487A | TripAdvisor Web Scraping, Data Preprocessing, Opta-planner Integration, Promotion-Attraction Matching, Web Input interface|
 
 ---
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
