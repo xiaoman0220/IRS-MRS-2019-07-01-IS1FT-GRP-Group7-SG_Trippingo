@@ -22,7 +22,7 @@ For the final result, travellers will get a full picture of how their trips in S
 ---
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
+| Official Full Name  | Student ID  | Work Items | Email |
 | :------------ |:---------------:| :-----| :-----|
 | Vidur Puliani | A0198492L | Klook Web Scraping, Promotion-Attraction Matching, Spring Boot Application and Database design, Opta-planner integration, Recommendation User Interface| A0198492L@u.nus.edu |
 | Gong Yifei | A0198495E | Data preprocessing, Prototype design, Diagrams, Implementation of rules, Itinerary interface, Video| A0198495E@u.nus.edu |
