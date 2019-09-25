@@ -23,7 +23,7 @@ For the final result, travellers will get a full picture of how their trips in S
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
 | Official Full Name  | Student ID  | Work Items |
-| :------------ |:---------------:| :-----| :-----|
+| :------------ |:---------------:| :-----|
 | Vidur Puliani | A0198492L | Klook Web Scraping, Promotion-Attraction Matching, Spring Boot Application and Database design, Opta-planner integration, Recommendation User Interface|
 | Gong Yifei | A0198495E | Data preprocessing, Prototype design, Diagrams, Implementation of rules, Itinerary interface, Video|
 | Li Jingmeng| A0198484J | Data preprocessing, Association Mining, Association Knowledge Representation, Association Recommendation User Interface|
