@@ -2,7 +2,8 @@
 ## SECTION 1 : PROJECT TITLE
 ## SG Trippingo - Singapore Attractions Recommender & Itinerary Planner
 
-
+<img src="SystemCode/cover.png"
+     style="float: left; margin-right: 0px;" />
 
 
 ---
